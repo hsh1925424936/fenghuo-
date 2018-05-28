@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>拖动</title>
+    <style>
+        .demo{
+            position:absolute;
+            cursor:move;
+        }
+    </style>
+</head>
+<body>
+    <img class="demo" src="./img/1.jpg" alt="">
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script>
+       $('.demo')[0].onmousedown = function(e){
+           arguments[0].preventDefault();
+           var mouseOffsetX = arguments[0].clientX - $('.demo')[0].offsetLeft;
+           var mouseOffsetY = arguments[0].clientY - $('.demo')[0].offsetTop;
+           document.onmousemove = function(e){
+               $('.demo')[0].style.left = arguments[0].clientX - mouseOffsetX +'px';
+               $('.demo')[0].style.top = arguments[0].clientY - mouseOffsetY +'px';
+           }
+           document.onmouseup = function(){
+               document.onmousemove = null;
+               document.onmouseup = null;
+           }
+       }
+    </script>
+</body>
+</html>

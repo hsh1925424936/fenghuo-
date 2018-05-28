@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>左右响应滚动</title>
+    <style>
+        html,body{
+            width:100%;
+            height: 100%;
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style:none;
+            margin:0;
+            padding:0;
+        }
+        .left{
+            position: fixed;
+            top:100px;
+            left:50px;
+            /* border:solid 1px red; */
+        }
+        .left ul li{
+            border:solid 1px red;
+            cursor:pointer;
+        }
+        .active{
+            background:red;
+            color:white;
+        }
+        .left ul li:not(:first-child){
+            border-top:none;
+        }
+        .left ul li+li{
+            border-top:none;
+        }
+        .left ul li:nth-of-type(n+2){
+            border-top:none;
+        }
+        .right{
+            position:absolute;
+            width:calc(100% - 500px);
+            min-width:400px;
+            left:300px;
+            border:solid 1px black;
+        }
+        .right ul{
+            width:100%;
+            height:100%;
+        }
+        .right ul li{
+            width:100%;
+            height:500px;
+            border:solid 1px green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left">
+        <ul>
+            <li class="active">
+                11111111
+            </li>
+            <li>
+                22222222
+            </li>
+            <li>
+                33333333
+            </li>
+            <li>
+                44444444
+            </li>
+            <li>
+                55555555
+            </li>
+            <li>
+                66666666
+            </li>
+        </ul>
+    </div>
+    <div class="right">
+        <ul>
+            <li>
+                11111111
+            </li>
+            <li>
+                22222222
+            </li>
+            <li>
+                33333333
+            </li>
+            <li>
+                44444444
+            </li>
+            <li>
+                55555555
+            </li>
+            <li>
+                66666666
+            </li>
+        </ul>
+    </div>
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script>
+        $('.left').on('click','ul li',function(){
+            var i = $(this).index()
+            // console.log(i)
+            $(this).addClass('active').siblings().removeClass('active');
+            var leftHeight = $(this).offset().top-$('body').scrollTop();
+            var rightHeight = $($('.right ul li')[i]).offset().top;
+            $('html,body').animate({
+                scrollTop:rightHeight+'px'
+            },'fast');
+        })
+        $(window).scroll(function(){
+            setArrowPoint()
+        })
+        function setArrowPoint(){
+            $('.right ul li').each(function(i,j){
+                var leftToTop = $($('.left ul li')[i]).offset().top - $('html,body').scrollTop();
+                var rightToTop = $($('.right ul li')[i]).offset().top - $('html,body').scrollTop();
+                // console.log(leftToTop)
+                var rightAllToTop = $($('.right ul li')[i]).offset().top+$($('.right ul li')[i]).outerHeight() - $('html,body').scrollTop();
+                // console.log($('html,body').scrollTop())
+                // console.log($('body').outerHeight())
+
+                if(rightToTop<leftToTop && rightAllToTop > leftToTop){
+                    $('.left ul li').siblings().removeClass('active');
+                    $($('.left ul li')[i]).addClass('active');
+                }else if($('html,body').scrollTop() >= $(document).outerHeight() - $('html,body').outerHeight()-$('.right ul li:last-of-type').outerHeight()/2){
+                    $('.left ul li').siblings().removeClass('active');
+                    $($('.left ul li')[$('.right ul').children().length-1]).addClass('active');
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
