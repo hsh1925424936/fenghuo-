@@ -132,7 +132,8 @@
                 if(rightToTop<leftToTop && rightAllToTop > leftToTop){
                     $('.left ul li').siblings().removeClass('active');
                     $($('.left ul li')[i]).addClass('active');
-                }else if($('html,body').scrollTop() >= $(document).outerHeight() - $('html,body').outerHeight()-$('.right ul li:last-of-type').outerHeight()/2){
+                }
+                else if($('html,body').scrollTop() >= ($(document).outerHeight() - $('html,body').outerHeight()-10)){
                     $('.left ul li').siblings().removeClass('active');
                     $($('.left ul li')[$('.right ul').children().length-1]).addClass('active');
                 }
