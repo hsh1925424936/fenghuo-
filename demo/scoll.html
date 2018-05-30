@@ -105,7 +105,7 @@
             </li>
         </ul>
     </div>
-    <script src="../jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
     <script>
         $('.left').on('click','ul li',function(){
             var i = $(this).index()
@@ -121,7 +121,7 @@
             setArrowPoint()
         })
         function setArrowPoint(){
-            $('.right ul li').each(function(i,j){
+            $('.right ul li').each(function(i,j){ 
                 var leftToTop = $($('.left ul li')[i]).offset().top - $('html,body').scrollTop();
                 var rightToTop = $($('.right ul li')[i]).offset().top - $('html,body').scrollTop();
                 // console.log(leftToTop)
