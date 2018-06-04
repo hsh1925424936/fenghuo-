@@ -1,0 +1,50 @@
+一、改变原数组的方法（9个）
+1.splice();返回值：包含删除元素的新数组；
+2.sort();
+    数组多条件排序：
+    var array = [{id:10,age:2},{id:5,age:4},{id:6,age:10},{id:9,age:6},{id:2,age:8},{id:10,age:9}];
+     array.sort(function(a,b){
+         if(a.id === b.id){// 如果id的值相等，按照age的值降序
+             return b.age - a.age
+         }else{ // 如果id的值不相等，按照id的值升序
+             return a.id - b.id
+         }
+     })
+  // [{"id":2,"age":8},{"id":5,"age":4},{"id":6,"age":10},{"id":9,"age":6},{"id":10,"age":9},{"id":10,"age":2}] 
+3~6.push()/pop()/shift()/unshift();
+7.reverse();颠倒数组中的元素
+8.copyWith()（ES6中指定位置的成员复制到其他位置）
+    var a=['OB1','Koro1','OB2','Koro2','OB3','Koro3','OB4','Koro4','OB5','Koro5']
+        // 2位置开始被替换,3位置开始读取要替换的 5位置前面停止替换
+        a.copyWithin(2,3,5)
+        // ["OB1","Koro1","Koro2","OB3","OB3","Koro3","OB4","Koro4","OB5","Koro5"] 
+9.fill();(ES6填充数组)；
+    ['a', 'b', 'c'].fill(7)
+    // [7, 7, 7]
+    ['a', 'b', 'c'].fill(7, 1, 2)
+    // ['a', 7, 'c']
+二、不改变原数组的方法（8个）
+1.slice();是浅拷贝，对于复杂的数据类型浅拷贝，拷贝的只是指向原数组的指针，所以无论改变原数组，还是浅拷贝的数组，都是改变原数组的数据。
+let a= [{name:'OBKoro1'}];
+    let b=a.slice();
+    console.log(b,a); // [{"name":"OBKoro1"}]  [{"name":"OBKoro1"}]
+    // a[0].name='改变原数组';
+    // console.log(b,a); // [{"name":"改变原数组"}] [{"name":"改变原数组"}]
+    // b[0].name='改变拷贝数组',b[0].koro='改变拷贝数组';
+    //  [{"name":"改变拷贝数组","koro":"改变拷贝数组"}] [{"name":"改变拷贝数组","koro":"改变拷贝数组"}]
+2.join()数组转换成字符串
+3.toLocaleString()数组转字符串；
+4.cancat()
+5.ES6中的扩展运算符...
+6.indexOf()查找数组是否存在某个元素，返回下标；
+7.lastIndexOf()；查找指定元素在数组中的最后一个位置；
+8.ES7中includes()查找数组是否包含某个元素返回布尔；
+三、关于遍历数组的方法（12个）
+
+遍历效率大小顺序（for~=do while >forEach~=map~=every>$.each>$(e).each）>for in
+
+ES5:forEach;every,some,filter,map,reduce,redueRight
+ES6:find,findIndex,keys,values,entries
+
+尽量不要在遍历的时候，修改后面要遍历的值
+尽量不要在遍历的时候修改数组的长度（删除/添加）
