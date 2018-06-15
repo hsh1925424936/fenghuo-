@@ -72,7 +72,7 @@
                 rect = item.getBoundingClientRect()// 用于获得页面中某个元素的左，上，右和下分别相对浏览器视窗的位置
                 // console.log(item)
                 if (rect.bottom >= 0 && rect.top < viewHeight) {
-                    !function () {
+                    (function () {
                         var img = new Image()
                         img.src = item.dataset.original
                         // img.src = $(item).data('original')
@@ -83,7 +83,7 @@
                         }
                         item.removeAttribute("data-original")//移除属性，下次不再遍历
                         item.removeAttribute("lazyload")
-                    }()
+                    })()
                 }
             })
         }
@@ -93,5 +93,3 @@
 </body>
 
 </html>
-
-作者：浪里行舟 链接：https://juejin.im/post/5b0c3b53f265da09253cbed0 来源：掘金 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
