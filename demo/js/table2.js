@@ -16,7 +16,13 @@ var data = [
                         sTime:'2018-3-4',
                         eTime:'2018-5-6',
                         count:'1203次',
-                    }
+                    },
+                    // {
+                    //     account:'66666666',
+                    //     sTime:'2018-3-4',
+                    //     eTime:'2018-5-6',
+                    //     count:'1203次',
+                    // },
                 ]
                 
             },
@@ -28,7 +34,19 @@ var data = [
                         sTime:'2018-3-4',
                         eTime:'2018-5-6',
                         count:'1203次',
-                    }
+                    },
+                    {
+                        account:'4444444444',
+                        sTime:'2018-3-4',
+                        eTime:'2018-5-6',
+                        count:'1203次',
+                    },
+                    // {
+                    //     account:'4444444444',
+                    //     sTime:'2018-3-4',
+                    //     eTime:'2018-5-6',
+                    //     count:'1203次',
+                    // },
                 ]
                 
             }
@@ -48,6 +66,18 @@ var data = [
                     },
                     {
                         account:'555555555',
+                        sTime:'2018-3-4',
+                        eTime:'2018-5-6',
+                        count:'1203次',
+                    },
+                    {
+                        account:'666666666',
+                        sTime:'2018-3-4',
+                        eTime:'2018-5-6',
+                        count:'1203次',
+                    },
+                    {
+                        account:'777777777',
                         sTime:'2018-3-4',
                         eTime:'2018-5-6',
                         count:'1203次',
@@ -105,15 +135,17 @@ function renderTable(data){
                 var $td2 = $('<td rowspan="'+(data[i].count[n-1].others.length)+'">'+data[i].count[j].account+'</td>');
                 if(k==0){
                     $tr2.append($td2,$td3,$td4,$td5,$td6);
+                    if($tr2.children().length>0){
+                        $('.tbody').append($tr2)
+                    }
                 }else{
                     $tr3.append($td3,$td4,$td5,$td6)
+                    if($tr3.children().length>0){
+                        $('.tbody').append($tr3)
+                    }
                 }
-                if($tr2.children().length>0){
-                    $('.tbody').append($tr2)
-                }
-                if($tr3.children().length>0){
-                    $('.tbody').append($tr3)
-                }
+                
+                
 
 
             }
