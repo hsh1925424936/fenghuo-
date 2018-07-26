@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/oasisl/css/oasisl.css">
+    <link rel="stylesheet" href="/oasisl/css/oasicon.css">
+    <link rel="stylesheet" href="/css/totalSituation.css">
+    <title>总体态势</title>
+</head>
+<body>
+    <div id="oas-container">
+        <!-- <div id="oas-hd">
+            
+        </div> -->
+        <div id="oas-bd">
+           <div class="bd-left">
+                <div class="dot">
+                    <p class="db"><i></i><span>等保情报</span></p>
+                    <p class="hacker"><i></i><span>黑客线索</span></p>
+                    <p class="center"><i></i><span>分中心</span></p>
+                </div>
+                <div class="map"></div>
+                <div class="back hide" data-action="back">
+                    <i></i>
+                    <span>返回全国地图</span>     
+                </div>
+                <!-- <div class="province hide"></div> -->
+                <div class="db-number">
+                    <p>
+                        <i></i>
+                        <span>当日情报数/等保情报数</span>
+                    </p>
+                    <div class="number-today" data-action="detail" data-type="db"></div>
+                    <span></span>
+                    <div class="number" data-action="detail" data-type="db"></div>
+                </div>
+                <div class="hacker-number">
+                    <p>
+                        <i></i>
+                        <span>当日线索数/黑客线索数</span>
+                    </p>
+                    <div class="number-today" data-action="detail" data-type="db"></div>
+                    <span></span>
+                    <div class="number" data-action="detail" data-type="hc"></div>
+                </div>
+                <div class="select-time">
+                    <p data-action="toggleTime">展开起时间轴</p>
+                    <div class="time">
+                        <!-- <div class="left">
+                            <span class='active' data-action="selectDate">今日</span>
+                            <span data-action="selectDate">自定义</span>
+                        </div> -->
+                        <!-- <div class="right today">
+                            <div></div>
+                        </div> -->
+                        <div class="right define">
+                            <div class="calendar">
+                                <input type="text" class="search-input form-control" id="calendar-datetime1">
+                                <i></i>
+                            </div>
+                            <span>至</span>
+                            <div class="calendar">
+                                <input type="text" class="search-input form-control" id="calendar-datetime2">
+                                <i></i>
+                            </div>
+                            <button class="btn btn-primary" data-action="sure">确定</button>
+                            <button class="btn btn-default" data-action="toggleTime">取消</button>
+                        </div>
+                    </div>
+                </div>
+           </div>
+           <div class="bd-right">
+               <div class="bd-right-top">
+                    <p class="title">
+                        <i></i>
+                        <span>近期趋势</span>
+                    </p>
+                    <div class="line"></div>
+               </div>
+               <div class="bd-right-center">
+                    <p class="title">
+                            <i></i>
+                            <span>被攻击网站类型分布</span>
+                        </p>
+                        <div class="pie"></div>
+               </div>
+               <div class="bd-right-bottom">
+                   <div class="bd-right-bottom-left">
+                        <p class="title">
+                                <i></i>
+                                <span>等保情报TOP5</span>
+                            </p>
+                            <div class="db-data">
+
+                            </div>
+                   </div>
+                   <div class="bd-right-bottom-right">
+                        <p class="title">
+                                <i></i>
+                                <span>黑客人员线索TOP5</span>
+                            </p>
+                            <div class="hacker-data">
+
+                            </div>
+                    </div>   
+               </div>
+           </div>
+        </div>
+        <!-- <div id="oas-fd">
+
+        </div> -->
+    </div>
+    <script src="/oasisl/js/lib/require.js"></script>
+    <script>
+         require(['/oasisl/js/oasisl.js'],function(){
+            require(['/js/totalSituation.js'],function(home){
+                home.init();
+            })
+        })
+    </script>
+</body>
+</html>

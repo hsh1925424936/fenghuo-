@@ -1,0 +1,448 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  min-width: 1920px;
+  min-height: 900px;
+  margin: 0;
+  padding: 0;
+  font-family: Microsoft YaHei; }
+  html #oas-container, body #oas-container {
+    width: 100%;
+    height: 100%;
+    background: #d6d6d7;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden; }
+    html #oas-container #oas-bd, body #oas-container #oas-bd {
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      padding: 20px 20px 10px;
+      box-sizing: border-box;
+      border-bottom: solid 3px #567db6;
+      background: url("/images/dt-bg.png") no-repeat;
+      background-size: 100% 100%;
+      overflow: hidden; }
+      html #oas-container #oas-bd .bd-left, body #oas-container #oas-bd .bd-left {
+        position: relative;
+        width: calc(65.1% - 40px);
+        height: 100%;
+        float: left; }
+        html #oas-container #oas-bd .bd-left .dot, body #oas-container #oas-bd .bd-left .dot {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1000; }
+          html #oas-container #oas-bd .bd-left .dot p, body #oas-container #oas-bd .bd-left .dot p {
+            margin: 0;
+            font-size: 14px;
+            color: gray; }
+            html #oas-container #oas-bd .bd-left .dot p span, body #oas-container #oas-bd .bd-left .dot p span {
+              margin-left: 10px; }
+          html #oas-container #oas-bd .bd-left .dot .db i, body #oas-container #oas-bd .bd-left .dot .db i {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #d56033;
+            border-radius: 50%; }
+          html #oas-container #oas-bd .bd-left .dot .hacker i, body #oas-container #oas-bd .bd-left .dot .hacker i {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #098bff;
+            border-radius: 50%; }
+          html #oas-container #oas-bd .bd-left .dot .center i, body #oas-container #oas-bd .bd-left .dot .center i {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background: url("/images/d_08.png") no-repeat;
+            background-size: 100% 100%;
+            border-radius: 50%; }
+        html #oas-container #oas-bd .bd-left .hide, body #oas-container #oas-bd .bd-left .hide {
+          display: none; }
+        html #oas-container #oas-bd .bd-left .map, body #oas-container #oas-bd .bd-left .map {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0; }
+        html #oas-container #oas-bd .bd-left .back, body #oas-container #oas-bd .bd-left .back {
+          position: absolute;
+          right: 0;
+          top: 110px;
+          width: 120px;
+          height: 30px;
+          background: #3c9ce6;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          padding: 2px 5px;
+          z-index: 10000;
+          border-radius: 5px;
+          cursor: pointer; }
+          html #oas-container #oas-bd .bd-left .back:hover, body #oas-container #oas-bd .bd-left .back:hover {
+            background: #167ccb; }
+          html #oas-container #oas-bd .bd-left .back i, body #oas-container #oas-bd .bd-left .back i {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url("../images/d_02.png") no-repeat;
+            background-size: 100% 100%; }
+        html #oas-container #oas-bd .bd-left .province, body #oas-container #oas-bd .bd-left .province {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0; }
+        html #oas-container #oas-bd .bd-left .db-number, body #oas-container #oas-bd .bd-left .db-number {
+          position: absolute;
+          top: 0;
+          right: 300px;
+          width: 270px;
+          height: 110px;
+          background: url("/images/1_09.png") no-repeat;
+          background-size: 100% 100%;
+          padding-left: 20px;
+          box-sizing: border-box;
+          z-index: 1000; }
+          html #oas-container #oas-bd .bd-left .db-number p, body #oas-container #oas-bd .bd-left .db-number p {
+            font-size: 14px;
+            margin-top: 20px; }
+            html #oas-container #oas-bd .bd-left .db-number p i, body #oas-container #oas-bd .bd-left .db-number p i {
+              display: block;
+              width: 20px;
+              height: 2px;
+              background: #d56033;
+              margin-bottom: 5px; }
+          html #oas-container #oas-bd .bd-left .db-number > span, body #oas-container #oas-bd .bd-left .db-number > span {
+            display: inline-block;
+            width: 2px;
+            height: 20px;
+            background: #d56033;
+            float: left;
+            transform: rotate(20deg);
+            margin: 0 5px; }
+          html #oas-container #oas-bd .bd-left .db-number .number-today, body #oas-container #oas-bd .bd-left .db-number .number-today {
+            float: left; }
+          html #oas-container #oas-bd .bd-left .db-number .number, body #oas-container #oas-bd .bd-left .db-number .number {
+            float: left; }
+          html #oas-container #oas-bd .bd-left .db-number .oas-number, body #oas-container #oas-bd .bd-left .db-number .oas-number {
+            color: #d56033;
+            font-size: 24px;
+            font-weight: bolder;
+            cursor: pointer; }
+        html #oas-container #oas-bd .bd-left .hacker-number, body #oas-container #oas-bd .bd-left .hacker-number {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 270px;
+          height: 110px;
+          background: url("/images/1_26.png") no-repeat;
+          background-size: 100% 100%;
+          padding-left: 20px;
+          box-sizing: border-box;
+          z-index: 1000; }
+          html #oas-container #oas-bd .bd-left .hacker-number p, body #oas-container #oas-bd .bd-left .hacker-number p {
+            font-size: 14px;
+            margin-top: 20px; }
+            html #oas-container #oas-bd .bd-left .hacker-number p i, body #oas-container #oas-bd .bd-left .hacker-number p i {
+              display: block;
+              width: 20px;
+              height: 2px;
+              background: #098bff;
+              margin-bottom: 5px; }
+          html #oas-container #oas-bd .bd-left .hacker-number > span, body #oas-container #oas-bd .bd-left .hacker-number > span {
+            display: inline-block;
+            width: 2px;
+            height: 20px;
+            background: #098bff;
+            float: left;
+            transform: rotate(20deg);
+            margin: 0 5px; }
+          html #oas-container #oas-bd .bd-left .hacker-number .number-today, body #oas-container #oas-bd .bd-left .hacker-number .number-today {
+            float: left; }
+          html #oas-container #oas-bd .bd-left .hacker-number .number, body #oas-container #oas-bd .bd-left .hacker-number .number {
+            float: left; }
+          html #oas-container #oas-bd .bd-left .hacker-number .oas-number, body #oas-container #oas-bd .bd-left .hacker-number .oas-number {
+            color: #098bff;
+            font-size: 24px;
+            font-weight: bolder;
+            cursor: pointer; }
+        html #oas-container #oas-bd .bd-left .select-time, body #oas-container #oas-bd .bd-left .select-time {
+          position: absolute;
+          bottom: -80px;
+          left: 50%;
+          margin-left: -440px;
+          width: 880px;
+          height: 70px;
+          border: solid 3px #567db6;
+          border-bottom: none;
+          z-index: 1000; }
+          html #oas-container #oas-bd .bd-left .select-time p, body #oas-container #oas-bd .bd-left .select-time p {
+            position: absolute;
+            left: 50%;
+            margin-left: -84px;
+            top: -28px;
+            width: 168px;
+            height: 28px;
+            background-image: url("/images/q.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            text-align: center;
+            line-height: 28px;
+            cursor: pointer;
+            color: #fff; }
+          html #oas-container #oas-bd .bd-left .select-time .time, body #oas-container #oas-bd .bd-left .select-time .time {
+            width: 100%;
+            height: 100%; }
+            html #oas-container #oas-bd .bd-left .select-time .time .left, body #oas-container #oas-bd .bd-left .select-time .time .left {
+              float: left;
+              width: 80px;
+              height: 100%; }
+              html #oas-container #oas-bd .bd-left .select-time .time .left span, body #oas-container #oas-bd .bd-left .select-time .time .left span {
+                display: block;
+                width: 100%;
+                height: 50%;
+                text-align: center;
+                line-height: 35px;
+                cursor: pointer;
+                background: #dce4e7;
+                color: #8798a2; }
+              html #oas-container #oas-bd .bd-left .select-time .time .left .active, body #oas-container #oas-bd .bd-left .select-time .time .left .active {
+                background: #fff;
+                color: #000; }
+            html #oas-container #oas-bd .bd-left .select-time .time .hide, body #oas-container #oas-bd .bd-left .select-time .time .hide {
+              display: none; }
+            html #oas-container #oas-bd .bd-left .select-time .time .right, body #oas-container #oas-bd .bd-left .select-time .time .right {
+              float: left;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              padding-left: 10%;
+              box-sizing: border-box; }
+              html #oas-container #oas-bd .bd-left .select-time .time .right .calendar, body #oas-container #oas-bd .bd-left .select-time .time .right .calendar {
+                position: relative;
+                width: 210px;
+                height: 34px;
+                margin: 0 10px; }
+                html #oas-container #oas-bd .bd-left .select-time .time .right .calendar input, body #oas-container #oas-bd .bd-left .select-time .time .right .calendar input {
+                  width: 100%;
+                  height: 100%; }
+                html #oas-container #oas-bd .bd-left .select-time .time .right .calendar i, body #oas-container #oas-bd .bd-left .select-time .time .right .calendar i {
+                  position: absolute;
+                  display: inline-block;
+                  width: 20px;
+                  height: 20px;
+                  right: 4px;
+                  top: calc(50% - 10px);
+                  background: url("/images/1_102.png") no-repeat;
+                  background-size: 100% 100%; }
+              html #oas-container #oas-bd .bd-left .select-time .time .right button, body #oas-container #oas-bd .bd-left .select-time .time .right button {
+                margin: 0 10px; }
+              html #oas-container #oas-bd .bd-left .select-time .time .right .btn-default, body #oas-container #oas-bd .bd-left .select-time .time .right .btn-default {
+                margin-left: 0px; }
+            html #oas-container #oas-bd .bd-left .select-time .time .today, body #oas-container #oas-bd .bd-left .select-time .time .today {
+              align-items: flex-end; }
+              html #oas-container #oas-bd .bd-left .select-time .time .today div, body #oas-container #oas-bd .bd-left .select-time .time .today div {
+                width: 740px;
+                height: 30px;
+                margin-bottom: 15px; }
+                html #oas-container #oas-bd .bd-left .select-time .time .today div span, body #oas-container #oas-bd .bd-left .select-time .time .today div span {
+                  position: relative;
+                  display: inline-block;
+                  width: 30px;
+                  height: 2px;
+                  background: #afb6bc; }
+                  html #oas-container #oas-bd .bd-left .select-time .time .today div span small, body #oas-container #oas-bd .bd-left .select-time .time .today div span small {
+                    position: absolute;
+                    right: 0;
+                    top: 5px; }
+                  html #oas-container #oas-bd .bd-left .select-time .time .today div span .zero, body #oas-container #oas-bd .bd-left .select-time .time .today div span .zero {
+                    position: absolute;
+                    left: 0;
+                    top: 5px; }
+                html #oas-container #oas-bd .bd-left .select-time .time .today div .first::before, body #oas-container #oas-bd .bd-left .select-time .time .today div .first::before {
+                  position: absolute;
+                  content: '';
+                  left: 0;
+                  bottom: 0;
+                  display: inline-block;
+                  width: 2px;
+                  height: 5px;
+                  background: #afb6bc; }
+                html #oas-container #oas-bd .bd-left .select-time .time .today div .last::after, body #oas-container #oas-bd .bd-left .select-time .time .today div .last::after {
+                  position: absolute;
+                  content: '';
+                  right: 0;
+                  bottom: 0;
+                  display: inline-block;
+                  width: 2px;
+                  height: 5px;
+                  background: #afb6bc; }
+      html #oas-container #oas-bd .bd-right, body #oas-container #oas-bd .bd-right {
+        width: 34.9%;
+        height: 100%;
+        float: left;
+        margin-left: 39px; }
+        html #oas-container #oas-bd .bd-right .title, body #oas-container #oas-bd .bd-right .title {
+          color: #ffffff;
+          font-weight: bold;
+          position: absolute;
+          width: 178px;
+          height: 40px;
+          line-height: 40px;
+          top: 0px;
+          left: 20px;
+          margin: 0;
+          padding: 0;
+          font-size: 16px; }
+        html #oas-container #oas-bd .bd-right .bd-right-top, body #oas-container #oas-bd .bd-right .bd-right-top {
+          position: relative;
+          width: 100%;
+          height: 33.33%;
+          background: url("/images/1_118.png") no-repeat;
+          background-size: 100% 100%; }
+          html #oas-container #oas-bd .bd-right .bd-right-top .title i, body #oas-container #oas-bd .bd-right .bd-right-top .title i {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url("/images/1_69.png") no-repeat;
+            background-size: 100% 100%; }
+          html #oas-container #oas-bd .bd-right .bd-right-top .line, body #oas-container #oas-bd .bd-right .bd-right-top .line {
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px; }
+        html #oas-container #oas-bd .bd-right .bd-right-center, body #oas-container #oas-bd .bd-right .bd-right-center {
+          position: relative;
+          width: 100%;
+          height: 33.33%;
+          background: url("/images/1_118.png") no-repeat;
+          background-size: 100% 100%; }
+          html #oas-container #oas-bd .bd-right .bd-right-center .title, body #oas-container #oas-bd .bd-right .bd-right-center .title {
+            height: 35px;
+            line-height: 35px; }
+            html #oas-container #oas-bd .bd-right .bd-right-center .title i, body #oas-container #oas-bd .bd-right .bd-right-center .title i {
+              display: inline-block;
+              width: 16px;
+              height: 16px;
+              background: url("/images/1_71.png") no-repeat;
+              background-size: 100% 100%; }
+          html #oas-container #oas-bd .bd-right .bd-right-center .pie, body #oas-container #oas-bd .bd-right .bd-right-center .pie {
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px; }
+        html #oas-container #oas-bd .bd-right .bd-right-bottom, body #oas-container #oas-bd .bd-right .bd-right-bottom {
+          width: 100%;
+          height: 33.33%; }
+          html #oas-container #oas-bd .bd-right .bd-right-bottom .bd-right-bottom-left, body #oas-container #oas-bd .bd-right .bd-right-bottom .bd-right-bottom-left {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            float: left;
+            background: url("/images/1_120.png") no-repeat;
+            background-size: 100% 100%; }
+            html #oas-container #oas-bd .bd-right .bd-right-bottom .bd-right-bottom-left .title, body #oas-container #oas-bd .bd-right .bd-right-bottom .bd-right-bottom-left .title {
+              top: -3px;
+              font-size: 14px; }
+              html #oas-container #oas-bd .bd-right .bd-right-bottom .bd-right-bottom-left .title i, body #oas-container #oas-bd .bd-right .bd-right-bottom .bd-right-bottom-left .title i {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                background: url("/images/1_73.png") no-repeat;
+                background-size: 100% 100%; }
+            html #oas-container #oas-bd .bd-right .bd-right-bottom .bd-right-bottom-left .db-data, body #oas-container #oas-bd .bd-right .bd-right-bottom .bd-right-bottom-left .db-data {
+              position: absolute;
+              top: 50px;
+              left: 10px;
+              right: 10px;
+              bottom: 10px; }
+          html #oas-container #oas-bd .bd-right .bd-right-bottom .bd-right-bottom-right, body #oas-container #oas-bd .bd-right .bd-right-bottom .bd-right-bottom-right {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            float: left;
+            background: url("/images/1_120.png") no-repeat;
+            background-size: 100% 100%; }
+            html #oas-container #oas-bd .bd-right .bd-right-bottom .bd-right-bottom-right .title, body #oas-container #oas-bd .bd-right .bd-right-bottom .bd-right-bottom-right .title {
+              top: -3px;
+              font-size: 14px; }
+              html #oas-container #oas-bd .bd-right .bd-right-bottom .bd-right-bottom-right .title i, body #oas-container #oas-bd .bd-right .bd-right-bottom .bd-right-bottom-right .title i {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                background: url("/images/1_73.png") no-repeat;
+                background-size: 100% 100%; }
+            html #oas-container #oas-bd .bd-right .bd-right-bottom .bd-right-bottom-right .hacker-data, body #oas-container #oas-bd .bd-right .bd-right-bottom .bd-right-bottom-right .hacker-data {
+              position: absolute;
+              top: 50px;
+              left: 10px;
+              right: 10px;
+              bottom: 10px; }
+          html #oas-container #oas-bd .bd-right .bd-right-bottom ul, body #oas-container #oas-bd .bd-right .bd-right-bottom ul {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none; }
+            html #oas-container #oas-bd .bd-right .bd-right-bottom ul li, body #oas-container #oas-bd .bd-right .bd-right-bottom ul li {
+              width: 100%;
+              height: 20%;
+              display: flex;
+              align-items: center;
+              padding-right: 20px;
+              box-sizing: border-box; }
+              html #oas-container #oas-bd .bd-right .bd-right-bottom ul li .order, body #oas-container #oas-bd .bd-right .bd-right-bottom ul li .order {
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                color: #ffffff;
+                font-weight: bolder;
+                text-align: center;
+                line-height: 24px;
+                margin: 0 20px; }
+              html #oas-container #oas-bd .bd-right .bd-right-bottom ul li .first, body #oas-container #oas-bd .bd-right .bd-right-bottom ul li .first {
+                background: #f75433; }
+              html #oas-container #oas-bd .bd-right .bd-right-bottom ul li .second, body #oas-container #oas-bd .bd-right .bd-right-bottom ul li .second {
+                background: #f18f3f; }
+              html #oas-container #oas-bd .bd-right .bd-right-bottom ul li .third, body #oas-container #oas-bd .bd-right .bd-right-bottom ul li .third {
+                background: #f2b90d; }
+              html #oas-container #oas-bd .bd-right .bd-right-bottom ul li .normal, body #oas-container #oas-bd .bd-right .bd-right-bottom ul li .normal {
+                background: #bdbdbd; }
+              html #oas-container #oas-bd .bd-right .bd-right-bottom ul li div, body #oas-container #oas-bd .bd-right .bd-right-bottom ul li div {
+                width: calc(100% - 64px); }
+                html #oas-container #oas-bd .bd-right .bd-right-bottom ul li div p, body #oas-container #oas-bd .bd-right .bd-right-bottom ul li div p {
+                  position: relative;
+                  height: 16px;
+                  background-image: -webkit-gradient(linear, right 0, 0 bottom, from(#6178eb), to(#7aaff8));
+                  border-radius: 2px;
+                  min-width: 10px;
+                  cursor: pointer; }
+                  html #oas-container #oas-bd .bd-right .bd-right-bottom ul li div p span, body #oas-container #oas-bd .bd-right .bd-right-bottom ul li div p span {
+                    display: inline-block;
+                    width: 120px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    position: absolute;
+                    top: -16px;
+                    font-size: 12px;
+                    left: 0; }
+                  html #oas-container #oas-bd .bd-right .bd-right-bottom ul li div p small, body #oas-container #oas-bd .bd-right .bd-right-bottom ul li div p small {
+                    position: absolute;
+                    color: #ffffff;
+                    top: 0;
+                    right: 5px; }
+
+.oas-calendar {
+  top: 550px !important; }
+
+.layui-layer-title {
+  background: linear-gradient(#0897ed, #0d69e6) !important;
+  border: none !important; }
