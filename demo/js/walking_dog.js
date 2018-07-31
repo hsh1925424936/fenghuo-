@@ -28,6 +28,8 @@
         }
         async start () {
             await this.loadResources();
+            // console.log('hahahahahhah')
+            console.log(this.dogPictures)
             this.pictureWidth = this.dogPictures[0].naturalWidth / 2;
             // 小狗初始化的位置放在最右边
             this.dog.mouseX = window.innerWidth - this.pictureWidth;
@@ -59,12 +61,13 @@
                     img.src = imgPath;
                 }));
             });
-            return new Promise(resolve => {
-                Promise.all(works).then(dogPictures => {
-                    this.dogPictures = dogPictures;
-                    resolve();
+                return new Promise(resolve => {
+                    Promise.all(works).then(dogPictures => {
+                        
+                        this.dogPictures = dogPictures;
+                        resolve();
+                    });
                 });
-            });
         }
         walk () {
             let now = Date.now();
