@@ -7,33 +7,66 @@
     <title>Document</title>
     <style>
         div{
-            width:100px;
-            height: 100px;
-            border:solid 1px red;
+            position:absolute;
+            bottom:0;
+            left:0;
+            width:300px;
+            height:300px;
+            /* margin:100px auto; */
+            /* border:solid 1px red; */
+            animation:test 1s infinite;
+            /* animation-timing-function: linear; */
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
         }
-        span{
-            display:inline-block;
-            width:20px;
-            height: 20px;
-            border:solid 1px black;
+        @keyframes test{
+            0%{
+                background-image: url('./img/0.png');
+            }
+            12.5%{
+                background-image: url('./img/1.png');
+            }
+            25%{
+                background-image: url('./img/2.png');
+            }
+            37.5%{
+                background-image: url('./img/3.png');
+            }
+            50%{
+                background-image: url('./img/4.png');
+            }
+            62.5%{
+                background-image: url('./img/5.png');
+            }
+            75%{
+                background-image: url('./img/6.png');
+            }
+            87.5%{
+                background-image: url('./img/7.png');
+            }
+            100%{
+                background-image: url('./img/7.png');
+            }
         }
+        
     </style>
 </head>
 <body>
     <div class="demo">
-        <span class="test">fasdk</span>
+        
     </div>
     <script src="./js/jquery-3.3.1.min.js"></script>
-    <script>
-        $('.demo').click(function(e){
-            alert('点击了父及元素div')
-        })
-        $('.test').click(function(e){
-            // e.stopPropagation();
-            e.stopImmediatePropagation()
-            // e.preventDefault()
-            alert('点击了子及span')
-        })
-    </script>
+   <script>
+       $(document).on('mousemove',function(e){
+        //    console.log(e.pageX+':'+e.pageY);
+           var top = parseInt($('.demo').css('bottom'));
+           var left = parseInt($('.demo').css('left'));
+           console.log(top)
+           $('.demo').css({
+               bottom:(e.pageY-300)<=0?0:(e.pageY-300)+'px',
+               left:(e.pageX-300)<=0?0:(e.pageX-300)+'px'
+           })
+       })
+   </script>
 </body>
 </html>
