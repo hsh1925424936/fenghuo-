@@ -144,10 +144,6 @@ function renderTable(data){
                         $('.tbody').append($tr3)
                     }
                 }
-                
-                
-
-
             }
         }
     }
