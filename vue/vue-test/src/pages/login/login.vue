@@ -22,6 +22,7 @@
 </template>
 <script>
     import axios from 'axios';
+    import $ from 'jquery'
     export default {
         data (){
             return{
@@ -29,9 +30,22 @@
             }
         },
         mounted(){
-            axios.get('/test').then(function(res){
-                console.log(res)
+            // axios.get('/api/login').then(function(res){
+            //     // console.log(res)
+            //     alert(res)
+            // })
+            $.ajax({
+                url:'/api/login',
+                type:'GET',
+                dataType:'json',
+                contentType:'application/json',
+                success:function(res){
+                    alert(res)
+                }
             })
+            // $.get('/api/login',function(res){
+            //     alert(res)
+            // })
         },
         methods:{
 
